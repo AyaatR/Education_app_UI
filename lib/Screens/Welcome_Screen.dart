@@ -1,7 +1,7 @@
-import 'package:eduction_ui/home_screen.dart';
-import 'package:eduction_ui/tabs_screen.dart';
+
+import 'package:eduction_ui/Screens/tabs_screen.dart';
 import 'package:flutter/material.dart';
-import 'tabs_screen.dart';
+
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -69,7 +69,7 @@ class WelcomeScreen extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 70),
                       child: Text(
                         'Learing with Pleasure with Dear Programmer Wherver are.',
-                        style: Theme.of(context).textTheme.headlineMedium,
+                        style: Theme.of(context).textTheme.titleMedium,
                         textAlign: TextAlign.center,
                       ),
                     ),

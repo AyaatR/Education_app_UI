@@ -1,4 +1,6 @@
-import 'package:eduction_ui/course_screen.dart';
+import 'package:eduction_ui/Screens/course_screen.dart';
+import 'package:eduction_ui/widgets/Decription_section.dart';
+import 'package:eduction_ui/widgets/video_section.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -136,16 +138,16 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Text(
                   'Courses',
-                  style: Theme.of(context).textTheme.headlineMedium,
+                  style: Theme.of(context).textTheme.headlineLarge,
                 ),
                 Text(
                   'see all',
-                  style: Theme.of(context).textTheme.headlineMedium,
+                  style: Theme.of(context).textTheme.headlineLarge,
                 ),
               ],
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: GridView.builder(
@@ -162,13 +164,11 @@ class HomeScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return InkWell(
                       onTap: () {
-                        Navigator.of(context).pushNamed(CourseScreen.screenRoute,
-                            arguments: {
-                              'title': imgList[index],
-                              'num':Courses[imgList[index]],
-
-                            }
-                        );
+                        Navigator.of(context)
+                            .pushNamed(CourseScreen.screenRoute, arguments: {
+                          'title': imgList[index],
+                          'num': Courses[imgList[index]],
+                        });
                       },
                       child: Container(
                         padding: const EdgeInsets.symmetric(vertical: 15),
@@ -200,30 +200,6 @@ class HomeScreen extends StatelessWidget {
                   }))
         ],
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   selectedItemColor: Colors.deepPurpleAccent,
-      //   unselectedItemColor: Colors.grey,
-      //   showSelectedLabels: true,
-      //   iconSize: 35,
-      //   items: const [
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.home),
-      //       label: 'Home',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.assignment),
-      //       label: 'Course',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.favorite),
-      //       label: 'Wishlist',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.person),
-      //       label: 'Account',
-      //     ),
-      //   ],
-      // ),
     );
   }
 }

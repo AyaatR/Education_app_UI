@@ -1,7 +1,7 @@
-import 'package:eduction_ui/Welcome_Screen.dart';
-import 'package:eduction_ui/course_screen.dart';
-import 'package:eduction_ui/favourite%20_screen.dart';
-import 'package:eduction_ui/home_screen.dart';
+import 'package:eduction_ui/Screens/Welcome_Screen.dart';
+import 'package:eduction_ui/Screens/course_screen.dart';
+import 'package:eduction_ui/Screens/favourite%20_screen.dart';
+import 'package:eduction_ui/Screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class TabsScreen extends StatefulWidget {

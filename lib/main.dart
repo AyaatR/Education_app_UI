@@ -1,7 +1,7 @@
-import 'package:eduction_ui/Welcome_Screen.dart';
-import 'package:eduction_ui/course_screen.dart';
-import 'package:eduction_ui/home_screen.dart';
-import 'package:eduction_ui/tabs_screen.dart';
+import 'package:eduction_ui/Screens/Welcome_Screen.dart';
+import 'package:eduction_ui/Screens/course_screen.dart';
+import 'package:eduction_ui/Screens/home_screen.dart';
+import 'package:eduction_ui/Screens/tabs_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,37 +16,57 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-         // scaffoldBackgroundColor: Colors.white,
-        primaryColor:Colors.deepPurpleAccent ,
+          // scaffoldBackgroundColor: Colors.white,
+          primaryColor: Colors.deepPurpleAccent,
           colorScheme: ColorScheme.fromSwatch()
               .copyWith(secondary: Colors.deepPurpleAccent),
           iconTheme: const IconThemeData(size: 40.0, color: Colors.white),
           textTheme: ThemeData.light().textTheme.copyWith(
               titleLarge: const TextStyle(
-                  //color: Colors.white,
-                  fontSize: 26,
-                  fontFamily: 'Raleway',
-                  fontWeight: FontWeight.w800,
-                  wordSpacing: 2),
-              headlineMedium: const TextStyle(
-                  fontSize: 15,
-                  fontFamily: 'Raleway',
-                  color: Colors.black54,
+                  fontSize: 25,
+                  fontFamily: 'Bold',
+                   color: Colors.black,
                   fontWeight: FontWeight.w700),
+
+
+              headlineMedium: const TextStyle(
+                fontSize: 17,
+                fontFamily: 'Regular',
+                color: Colors.black,
+              ),
+
+
+              titleMedium: TextStyle(
+                  fontSize: 15,
+                  fontFamily: 'Medium',
+                  color: Colors.black.withOpacity(0.5),
+                  fontWeight: FontWeight.w600),
+
+
+              headlineLarge: const TextStyle(
+                  fontSize: 17,
+                  fontFamily: 'Regular',
+                  color: Colors.blueAccent,
+                  decoration: TextDecoration.underline,
+                  fontWeight: FontWeight.w800),
+
+
               headlineSmall: const TextStyle(
-                  fontFamily: 'Raleway',
+                  fontFamily: 'Bold',
                   fontSize: 20,
                   color: Colors.white,
-                  fontWeight: FontWeight.w800))),
+                  fontWeight: FontWeight.w800)
+
+
+          )),
       //home: const WelcomeScreen(),
       initialRoute: '/',
 
       routes: {
         '/': (ctx) => WelcomeScreen(),
         HomeScreen.ScreenRoute: (ctx) => HomeScreen(),
-       TabsScreen.screenRoute:(ctx)=>TabsScreen(),
-        CourseScreen.screenRoute:(ctx)=>CourseScreen()
-
+        TabsScreen.screenRoute: (ctx) => TabsScreen(),
+        CourseScreen.screenRoute: (ctx) => CourseScreen()
       },
     );
   }
